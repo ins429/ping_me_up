@@ -1,5 +1,7 @@
-defmodule Dentalicious.Ping do
+defmodule PingMeUp.Ping do
   use GenServer
+
+  require Logger
 
   @ping_url System.get_env("PING_URL")
   @interval 60_000 * 5 # every 5 minutes
