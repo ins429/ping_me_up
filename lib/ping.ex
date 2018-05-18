@@ -27,7 +27,8 @@ defmodule PingMeUp.Ping do
   end
 
   defp ping do
-    HTTPoison.get(@ping_url)
-    |> Logger.info()
+    result = HTTPoison.get(@ping_url)
+    Logger.info("#{inspect result}")
+    :ok
   end
 end
