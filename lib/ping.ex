@@ -4,7 +4,8 @@ defmodule PingMeUp.Ping do
   require Logger
 
   @ping_url System.get_env("PING_URL")
-  @interval 60_000 * 5 # every 5 minutes
+  # @interval 60_000 * 5 # every 5 minutes
+  @interval 60_000
 
   def start_link do
     GenServer.start_link(__MODULE__, :ok)
